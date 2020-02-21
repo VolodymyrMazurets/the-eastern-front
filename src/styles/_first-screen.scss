@@ -38,18 +38,30 @@ $styles: "first-screen";
       margin: 0;
     }
   }
-  &__navigation-item:not(:last-child) {
+  &__navigation-item {
+    display: inline-block;
     margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   &__navigation-link {
     @include text($H200, 300, $N0);
     font-family: $sec-font;
     @include transition(font-weight);
     &:hover {
-      font-weight: 700;
       text-decoration: none;
       color: $N0;
+      font-weight: 700;
     }
+    &::after {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+  }
   }
   &__play {
     @include size(81px, true);
