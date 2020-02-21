@@ -2,7 +2,7 @@ $styles: "first-screen";
 
 .#{$styles} {
   min-height: 100vh;
-  background: url("../../images/home-page-bg.jpg") no-repeat;
+  background: url("../images/home-page-bg.jpg") no-repeat;
   background-size: cover;
   padding: 60px 0 45px;
   @include flex-row(center, center);
