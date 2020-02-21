@@ -1,0 +1,38 @@
+$styles: 'our-work';
+.#{$styles} {
+  padding: 70px 0 140px;
+  text-align: center;
+  @include media {
+    padding-bottom: 70px;
+  }
+  &__title {
+    @include text($H350, 600, $N00);
+    margin-bottom: 127px;
+    @include media {
+      font-size: $H450;
+      margin-bottom: 8px;
+    }
+  }
+  &__link {
+    display: none;
+    @include media {
+      @include text($H80, 400, $N00);
+      text-decoration: underline;
+      @include transition(color);
+      display: inline-block;
+      margin-bottom: 158px;
+      &:hover {
+        color: lighten($color: #000000, $amount: 10%)
+      }
+    }
+  }
+  &__img {
+    object-fit: cover;
+  }
+  &__item {
+    @include flex-row(center, center);
+  }
+  &__slider-block {
+    margin-bottom: 130px;
+  }
+}

@@ -1,0 +1,43 @@
+$styles: 'app-footer';
+.#{$styles} {
+  background-color: $N00;
+  padding: 65px 0 85px;
+  &__title {
+    @include text($H210, 700, $N0);
+    margin-bottom: 16px;
+  }
+  &__text {
+    @include text($H40, 400, $N0);
+    line-height: 26px;
+    margin: 0;
+  }
+  &__list {
+    list-style: none;
+    @include flex-col(space-between, flex-start);
+    height: 100%;
+    padding: 0;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__link {
+    @include text($H40, 600, $N0);
+    @include transition(color);
+    &:hover {
+      color: darken($color: #fff, $amount: 20%);
+      text-decoration: none;
+    }
+  }
+  &__name {
+    @include text($H40, 600, $N0);
+    margin-bottom: 10px;
+  }
+  &__location {
+    @include text($H40, 400, $N0);
+    @include transition(color);
+    &:hover {
+      color: darken($color: #fff, $amount: 20%);
+      text-decoration: none;
+    }
+  }
+}

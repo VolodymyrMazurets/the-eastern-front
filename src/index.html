@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Eastern Front</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <section class="first-screen">
+      <nav class="first-screen__nav" id="nav-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="first-screen__logo-wrapper">
+            <a href="/" class="d-block"
+              ><img
+                class="our-work__img"
+                src="./images/logo.svg"
+                alt="logo"
+                class="first-screen__logo"
+            /></a>
+          </div>
+          <ul class="first-screen__navigation">
+            <li class="first-screen__navigation-item">
+              <a href="#" class="first-screen__navigation-link">Home</a>
+            </li>
+            <li class="first-screen__navigation-item">
+              <a href="#" class="first-screen__navigation-link">Art Gallery</a>
+            </li>
+            <li class="first-screen__navigation-item">
+              <div class="uk-inline">
+                <a href="#" class="first-screen__navigation-link">Our Work</a>
+                <div uk-drop>
+                    <div class="first-screen__drop">
+                      <ul class="first-screen__drop-list">
+                        <li class="first-screen__drop-item">
+                          <a href="#" class="first-screen__drop-link">The eastern front</a>
+                        </li>
+                        <li class="first-screen__drop-item">
+                          <a href="#" class="first-screen__drop-link">Keith Mundt</a>
+                        </li>
+                        <li class="first-screen__drop-item">
+                          <a href="#" class="first-screen__drop-link">Michael Mince</a>
+                        </li>
+                        <li class="first-screen__drop-item">
+                          <a href="#" class="first-screen__drop-link">Theo Pingerelli</a>
+                        </li>
+                        <li class="first-screen__drop-item">
+                          <a href="#" class="first-screen__drop-link">Dario Del Core</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+            </li>
+            <li class="first-screen__navigation-item">
+              <a href="#" class="first-screen__navigation-link">Who we are</a>
+            </li>
+            <li class="first-screen__navigation-item">
+              <a href="#" class="first-screen__navigation-link">Shop</a>
+            </li>
+            <li class="first-screen__navigation-item">
+              <a href="#" class="first-screen__navigation-link">Get in Touch</a>
+            </li>
+          </ul>
+          <button class="first-screen__burger">
+            <img src="./images/burger.png" alt="burger" />
+          </button>
+        </div>
+      </nav>
+      <a href="#" class="first-screen__play">
+        <img src="./images/play-icon.svg" alt="play" />
+      </a>
+      <a href="#" class="first-screen__location">
+        <span>THE EASTERN FRONT GALLERY</span>
+        <span>4090 Burton Drive, 2nd Floor</span>
+        <span>Cambria, CA 93428</span>
+      </a>
+    </section>
+
+    <section class="our-work">
+      <div class="container">
+        <h2 class="our-work__title">Our work</h2>
+        <a href="#" class="our-work__link">View more</a>
+        <div uk-slider>
+          <div
+            class="uk-position-relative uk-visible-toggle uk-light our-work__slider-block"
+            tabindex="-1"
+          >
+            <ul
+              class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s"
+            >
+              <li class="our-work__item">
+                <img class="our-work__img" src="images/Image_1.png" alt="slider" />
+              </li>
+              <li class="our-work__item">
+                <img class="our-work__img" src="images/image_2.png" alt="slider" />
+              </li>
+              <li class="our-work__item">
+                <img class="our-work__img" src="images/Image_3.png" alt="slider" />
+              </li>
+              <li class="our-work__item">
+                <img class="our-work__img" src="images/Image_1.png" alt="slider" />
+              </li>
+              <li class="our-work__item">
+                <img class="our-work__img" src="images/image_2.png" alt="slider" />
+              </li>
+              <li class="our-work__item">
+                <img class="our-work__img" src="images/Image_3.png" alt="slider" />
+              </li>
+            </ul>
+          </div>
+          <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="who-we-are">
+      <div class="container who-we-are__container">
+        <h2 class="who-we-are__title">Who we are</h2>
+        <p class="who-we-are__text">
+          The Eastern Front was founded 2016 with a vision to build 1/35 scale
+          diorama pieces to be enjoyed by the general public. For those who are
+          not familiar, dioramas are framed, three-dimensional art pieces
+          presenting a part of military history, in our case mainly WWII. Every
+          diorama concept first starts off by the building of plastic or resin
+          model kits, molded by some of the world’s most famous kit makers.
+          <span>
+            Modelers with some experience will remember names like Verlinden,
+            Tamiya and Dragon. After the kits are built, the vehicles and soldiers
+            go to the painting stage, where acrylics, enamels and oils are used in
+            a step by step process to gain maximum realism. The final stage is
+            arrangement of the pieces on a frame to depict various dramatic
+            elements of the war. Finished products provide hours of viewing
+            enjoyment, whether you are an experienced modeler or just a fan.
+          </spa>
+        </p>
+        <a href="#" class="who-we-are__btn">Read more</a>
+      </div>
+    </section>
+
+    <section class="instagram">
+      <div class="container">
+        <div class="instagram__link-wrapper">
+          <a class="instagram__link">
+            <img src="./images/instagram.svg" alt="instagram">
+            @theeasternfront
+          </a>
+        </div>
+        <div uk-slider>
+          <div
+            class="uk-position-relative uk-visible-toggle uk-light instagram__slider-block"
+            tabindex="-1"
+          >
+            <ul
+              class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s"
+            >
+              <li class="instagram__item">
+                <img class="instagram__img" src="images/3.jpg" alt="slider" />
+              </li>
+              <li class="instagram__item">
+                <img class="instagram__img" src="images/4.jpg" alt="slider" />
+              </li>
+              <li class="instagram__item">
+                <img class="instagram__img" src="images/5.jpg" alt="slider" />
+              </li>
+            </ul>
+          </div>
+          <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-4 mb-lg-0 pr-lg-5">
+            <h2 class="app-footer__title">The eastern front</h2>
+            <p class="app-footer__text">
+              The Eastern Front was founded 2016 with a vision to build 1/35
+              scale diorama pieces to be enjoyed by the general public. For
+              those who are not familiar, dioramas are framed, three-dimensional
+              art pieces .
+            </p>
+          </div>
+          <div class="col-6 col-lg-2 mb-5 mb-lg-0 pl-lg-5">
+            <ul class="app-footer__list">
+              <li class="app-footer__item">
+                <a href="#" class="app-footer__link">Home</a>
+              </li>
+              <li class="app-footer__item">
+                <a href="#" class="app-footer__link">Art Gallery</a>
+              </li>
+              <li class="app-footer__item">
+                <a href="#" class="app-footer__link">Our Work</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+            <ul class="app-footer__list">
+              <li class="app-footer__item">
+                <a href="#" class="app-footer__link">Who we are</a>
+              </li>
+              <li class="app-footer__item">
+                <a href="#" class="app-footer__link">Shop</a>
+              </li>
+              <li class="app-footer__item">
+                <a href="#" class="app-footer__link">GET IN TOUCH</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-lg-2 d-flex flex-column justify-content-between"
+          >
+            <h4 class="app-footer__name">THE EASTERN FRONT ART GALLERY</h4>
+            <a href="#" class="app-footer__location"
+              >4090 Burton Drive, 2nd Floor</a
+            >
+            <a href="#" class="app-footer__location">Cambria, CA 93428</a>
+            <a href="#" class="app-footer__location">818.764.6717</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#" uk-totop uk-scroll class="to-top" id="to-top"></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/js/uikit-icons.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

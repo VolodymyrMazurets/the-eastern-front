@@ -1,0 +1,15 @@
+// BOOTSTRAP GRID 
+@import './core/bootstrap-grid.scss';
+
+// CORE
+@import './core/fonts';
+@import './core/vars';
+@import './core/mixins';
+@import './core/common';
+
+// HOME PAGE 
+@import './components/first-screen';
+@import './components/who-we-are';
+@import './components/our-work';
+@import './components/instagram';
+@import './components/footer';

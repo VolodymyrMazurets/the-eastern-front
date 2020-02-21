@@ -1,0 +1,67 @@
+$styles: 'who-we-are';
+.#{$styles} {
+  padding: 65px 0;
+  background: url('../../images/who-we-are-bg.png') no-repeat;
+  background-size: cover;
+  background-position: 83% 10%;
+  position: relative;
+  color: $N0;
+  @include media {
+    padding: 70px 0;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    @include position;
+    background-color: $N00;
+    z-index: 0;
+    opacity: 0.31;
+  }
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  &__title {
+    font-family: $sec-font;
+    @include text($H330, 600, $N0);
+    text-align: center;
+    margin-bottom: 20px;
+    @include media {
+      font-size: $H450;
+      margin-bottom: 114px;
+    }
+  }
+  &__text {
+    @include text($H210, 400, $N0);
+    margin-bottom: 50px;
+    line-height: 41px;
+    span {
+      display: none;
+    }
+    @include media {
+      line-height: 43px;
+      font-size: $H240;
+      margin-bottom: 90px;
+      span {
+        display: initial;
+      }
+    }
+  }
+  &__btn {
+    margin: auto;
+    height: 65px;
+    min-width: 250px;
+    max-width: fit-content;
+    padding: 0 60px;
+    @include flex-row(center, center);
+    border-radius: 5px;
+    border: 2px solid $N0;
+    @include transition(color, border-color);
+    @include text($H80, 600, $N0);
+    &:hover {
+      color: darken($color: #fff, $amount: 20%);
+      border-color: darken($color: #fff, $amount: 20%);
+      text-decoration: none;
+    }
+  }
+}

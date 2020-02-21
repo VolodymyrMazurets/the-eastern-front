@@ -1,0 +1,33 @@
+$styles: 'instagram';
+.#{$styles} {
+  padding: 140px 0 110px;
+  @include media {
+    padding: 70px 0 100px;
+  }
+  &__link-wrapper {
+    @include flex-row(center, center);
+    margin-bottom: 80px;
+    @include media {
+      margin-bottom: 22px;
+      @include flex-row(flex-end, center);
+    }
+  }
+  &__link {
+    @include text($H80, 600, $N00);
+    img {
+      margin-right: 8px;
+    }
+    @include media {
+      &:hover {
+        text-decoration: none;
+        color: $N00;
+      }
+    }
+  }
+  &__item {
+    padding: 15px;
+  }
+  &__slider-block {
+    margin-bottom: 60px;
+  }
+}

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: $main-font;
+}
+.uk-dotnav>.uk-active>* {
+  background-color: $N00;
+}
+.uk-dotnav>*>* {
+  border: none;
+  background-color: $N100;
+}
+.to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  @include size(50px, true);
+  background-color: rgba($N00, 0.5);
+  @include flex-row(center, center);
+  color: $N0;
+  display: none;
+  z-index: 100;
+  @include media {
+    right: 50px;
+    bottom: 50px;
+  }
+}
