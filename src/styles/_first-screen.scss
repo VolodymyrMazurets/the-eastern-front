@@ -1,6 +1,6 @@
 $styles: "first-screen";
 
-.#{$styles} {
+##{$styles} {
   min-height: 100vh;
   background: url("../images/home-page-bg.jpg") no-repeat;
   background-size: cover;
@@ -8,7 +8,7 @@ $styles: "first-screen";
   @include flex-row(center, center);
   position: relative;
   background-position: 45% 10%;
-  &__nav {
+  #nav-bar {
     padding: 55px 0;
     position: fixed;
     top: 0;
@@ -22,48 +22,48 @@ $styles: "first-screen";
       padding: 30px 0;
       background-color: rgba($N00, 0.5);
     }
+    ul {
+      display: none;
+      @include media {
+        @include flex-row(flex-start, center);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        display: inline-block;
+        margin-right: 40px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          @include text($H200, 300, $N0);
+          font-family: $sec-font;
+          @include transition(font-weight);
+          &:hover {
+            text-decoration: none;
+            color: $N0;
+            font-weight: 700;
+          }
+          &::after {
+            display: block;
+            content: attr(title);
+            font-weight: bold;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+          }
+        }
+      }
+    }
   }
-  &__logo-wrapper {
+  #logo {
     max-width: 202px;
     @include media($screen-desktop) {
       max-width: initial;
     }
   }
-  &__navigation {
-    display: none;
-    @include media {
-      @include flex-row(flex-start, center);
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-  }
-  &__navigation-item {
-    display: inline-block;
-    margin-right: 40px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  &__navigation-link {
-    @include text($H200, 300, $N0);
-    font-family: $sec-font;
-    @include transition(font-weight);
-    &:hover {
-      text-decoration: none;
-      color: $N0;
-      font-weight: 700;
-    }
-    &::after {
-      display: block;
-      content: attr(title);
-      font-weight: bold;
-      height: 0;
-      overflow: hidden;
-      visibility: hidden;
-  }
-  }
-  &__play {
+  #play {
     @include size(81px, true);
     border: 4px solid $N0;
     @include flex-row(center, center);
@@ -82,7 +82,7 @@ $styles: "first-screen";
       @include size(122px, true);
     }
   }
-  &__location {
+  #location {
     display: none;
     @include media {
       display: inline-block;
@@ -102,7 +102,7 @@ $styles: "first-screen";
       }
     }
   }
-  &__burger {
+  #burger {
     background-color: transparent;
     border: none;
     outline: none;
@@ -110,32 +110,35 @@ $styles: "first-screen";
       display: none;
     }
   }
-  &__drop {
+  #drop {
     border-radius: 5px;
     background-color: #ffffff;
     opacity: 0.95;
     padding: 17px 35px 26px;
-  }
-  &__drop-list {
-    list-style: none;
-    @include flex-col;
-    padding: 0;
-    margin: 0;
-  }
-  &__drop-item:not(:last-child) {
-    margin-bottom: 18px;
-  }
-  &__drop-link {
-    @include text($H80, 300, $N00);
-    font-family: $sec-font;
-    @include transition(font-weight);
-    &:hover {
-      text-decoration: none;
-      color: $N00;
-      font-weight: 700;
+    ul {
+      list-style: none;
+      @include flex-col;
+      padding: 0;
+      margin: 0;
+      li {
+        margin-bottom: 18px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          @include text($H80, 300, $N00);
+          font-family: $sec-font;
+          @include transition(font-weight);
+          &:hover {
+            text-decoration: none;
+            color: $N00;
+            font-weight: 700;
+          }
+        }
+      }
     }
   }
   .uk-drop {
-    width: 214px;
+    width: 250px;
   }
 }
