@@ -1,0 +1,91 @@
+$styles: gallery-section;
+.#{$styles} {
+  padding: 37px 0 89px;
+  &__bread-crumbs {
+    padding: 0 7px 32px;
+    @include flex-row(space-between, center);
+    @include media {
+      padding: 0 139px 48px;
+    }
+  }
+  &__bread-crumbs-list {
+    list-style: none;
+    @include flex-row(flex-start, center);
+    margin: 0;
+    padding: 0;
+  }
+  &__bread-crumbs-item {
+    @include text($H20, 300, $N00);
+    margin-right: 8px;
+    @include media {
+      font-size: $H200;
+    }
+  }
+  &__bread-crumbs-link {
+    font-family: $main-font;
+    @include text($H20, 300, $N00);
+    @include transition(color);
+    @include media {
+      font-size: $H200;
+      &:hover {
+        text-decoration: none;
+        color: lighten(#000, 40%);
+      }
+    }
+    &--active {
+      font-weight: normal;
+    }
+  }
+  &__bread-crumbs-btn {
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px $N200;
+    background-color: $N0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: 600;
+    color: $N300;
+    @include transition(background-color);
+    @include media {
+      font-size: 18px;
+      height: 45px;
+      padding: 0 60px;
+      &:hover {
+        background-color: $N100;
+        text-decoration: none;
+        color: $N300;
+      }
+    }
+    
+  }
+  &__row {
+    @include flex-row;
+    flex-wrap: wrap;
+  }
+  &__card {
+    height: calc(100% / 3 - 14px);
+    width: calc(100% / 3 - 14px);
+    max-height: calc(1140% / 3 - 30px);
+    position: relative;
+    padding-top: 31.5%;
+    margin: 7px;
+    border-radius: 5px;
+    overflow: hidden;
+    @include media {
+      margin: 15px;
+      width: calc(100% / 3 - 30px);
+      max-height: calc(1140% / 3 - 30px);
+    }
+    img {
+      position: absolute;
+      @include position;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}

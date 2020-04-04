@@ -1,6 +1,6 @@
 $styles: "first-screen";
 
-##{$styles} {
+.#{$styles} {
   min-height: 100vh;
   background: url("../images/home-page-bg.jpg") no-repeat;
   background-size: cover;
@@ -8,6 +8,21 @@ $styles: "first-screen";
   @include flex-row(center, center);
   position: relative;
   background-position: 45% 10%;
+  &--galery {
+    min-height: 547px;
+    background: url("../images/galery/bg-shop@3x.jpg") no-repeat;
+    background-size: cover;
+    background-position: 35% 10%;
+    padding: 0 0 101px;
+    align-items: flex-end;
+    &:after {
+      content: '';
+      position: absolute;
+      @include position;
+      background-color: rgba(#000, .4);
+      z-index: 0;
+    }
+  }
   #nav-bar {
     padding: 55px 0;
     position: fixed;
@@ -140,5 +155,16 @@ $styles: "first-screen";
   }
   .uk-drop {
     width: 250px;
+  }
+  .active {
+    font-weight: 700 !important;
+  }
+  &__title{
+    @include text($H350, 600, $N0);
+    font-family: $sec-font;
+    z-index: 1;
+    @include media {
+      font-size: $H450;
+    }
   }
 }
