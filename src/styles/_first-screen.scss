@@ -24,7 +24,7 @@ $styles: "first-screen";
     }
   }
   #nav-bar {
-    padding: 55px 0;
+    padding: 42px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -166,5 +166,39 @@ $styles: "first-screen";
     @include media {
       font-size: $H450;
     }
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    background: #000;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    &.show{
+      display: flex;
+    }
+  }
+  .mobile-nav-link {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: normal;
+    color: $N0;
+    text-decoration: none;
+    transition: 0.2s color ease;
+    margin-bottom: 24px;
+  }
+  #close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 10px;
   }
 }
